@@ -1,4 +1,3 @@
-; LINTING TOOL
 [flake8]
 exclude = 
     migrations,
