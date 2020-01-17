@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 # TEST CREATED USER
 # IMPORT GET USER HELPER FUNCTION THAT COMES WITH DJANGO
 
+
 class ModelTests(TestCase):
 
     def test_create_user_with_email_successful(self):

@@ -5,13 +5,13 @@ class UserManager(BaseUserManager):
 
     def create_user(self, email, password=None , **extra_fields):
         """Creates and saves a new user"""
-        # EXTRA FIELDS MEANS WHEN YOU ADD EXTRA FIELDS EXAMPLE
-        # ADDRESS, OR PEROSNAL IFORMATION FOR LOGIN YOU DONT HAVE TO
-        # ADD IT ON THE MODEL 
+        """EXTRA FIELDS MEANS WHEN YOU ADD EXTRA FIELDS EXAMPLE"""
+        """ADDRESS, OR PEROSNAL IFORMATION FOR LOGIN YOU DONT HAVE TO"""
+        """ADD IT ON THE MODEL """
         if not email:
             raise ValueError('Users must have an email address')
         user = self.model(email=self.normalize_email(email), **extra_fields)
-        # PASSWORD HAS TO BE ENCRYPTED
+        """PASSWORD HAS TO BE ENCRYPTED"""
         user.set_password(password)
         user.save(using=self._db)
         
